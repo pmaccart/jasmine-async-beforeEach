@@ -17,7 +17,7 @@ var aBeforeEach = function (modules, fn) {
         });
 
         runs(function () {
-            fn.apply(undefined, Array.prototype.slice.call(imports, 0));
+            fn.apply(this, Array.prototype.slice.call(imports, 0));
         });
     });
 }
